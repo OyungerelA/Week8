@@ -3,19 +3,26 @@ Week 8 HW - Make a Node-Express app that incorporates Socket.io. Try to incorpor
 - At least one ‘emit’ event on the server-side and one ‘emit’ event on the client-side
 - The ability to open 2 browser tabs and share data in real-time between the two
 
+See project [here](https://lacy-ginger-mayonnaise.glitch.me/).
+
 ### Project Plan
 
+In this homework, I thought about potential applications I could make and I was initially leaning towards making a version of a website that exists currently (I forgot the name) that allows attendees in a meeting to write words/phrases on a given topic and the largeness of each word font depends on how frequently the word is inputted by clients. But then I got kind of intimidated, as I wasn't sure how I could dynamically change the size of the words without making it ugly. So after thinking, I finally decided to create an application that is based on a similar idea, but is more focused on languages. Therefore, the application I created is a language-sharing/language-connecting website that allows people to write basic words and phrases in their own languages and share it with others. 
 
-<img src="public/images.wireframe.jpg" width="600"/>
+<img src="public/images/wireframe.jpg" width="600"/>
 
-<img src="wireframe1.jpg" width="600"/>
+On the main page, the user will be able to get random words and translate the word in different languages using the drop down menu and input field. When they enter the translated word, it appears on the screen so that others can see. There is also a number board at the top right of the screen that keeps track of how many different languages the word is entered in. The app is meant to be a fun and educational app where people can easily learn simple words in many different languages.
 
+<img src="public/images/socket_diagram.jpg" width="600"/>
 
-In terms of structure and design, the screen will be divided into two parts where the left-half will consist of the circles and the other half will be for textual information or the chart-like representations of users in terms of age-group. When the users hovers on the circle, the color of the circle will change (or other animation I will decide later on) and when the users presses on it, the heading will be changed and the later half of the screen will display information of the app represented by that circle. At this moment, my idea is still quite rough and I really hope I can get feedback from professor and my peers so I can make improvements. At this moment, I'm also debating whether to add more data onto the dataset, as right now, it only holds two types of information. I'll continue to give it more thought, but as of right now, this is the plan that I have. 
+### Process
 
-<img src="wireframe2.jpg" width="600"/>
-<img src="wireframe3.jpg" width="600"/>
+I created a JSON file containing 16 basic words and phrases that people learn when they first start learning a new language. I also copy and pasted roughly all languages in the world into a JSON file to populate the dropdown menu for choosing the language of the word. Then I randomly choose a word from the JSON file and display it on the screen when the client clicks on the 'Get Word' button. At first, I randomly chose the word and displayed it strictly on the index.js file without using sockets and ended up with different words appearing on each client window. Then I realized that for all clients to get the same word and get the word updated whenever the button is pressed again, I should use sockets (send it to server first and display the information when the server send it back). The diagram I drew beforehand and the in-class codes were very helpful to add the interactions between the client and server. 
 
+After finishing the website, I realized that users may find it hard at first to understand how it works, so I created an instructional landing page so that they can read a short info to understand the goal of the website. On top of practicing sockets and getting quite comfortable with it, I also got to practice appendChild, removeChild well. 
 
-## Next Steps
-For now, I have only fetched the data from my dataset and displayed it on my website. So my next steps would be to create the skeleton of my website, by making the respective containers and playing around with how I want my data to be exhibited. I'm a bit worried about my web application becoming too much of a data visualization page rather than a "web application", so I'll continue to give more thought on what interactions I could add to my webpage so that it becomes a more comprehensive and complete application that not only visualizes data but also gives the users a chance to interact with the data. 
+## Challenges & Next Steps
+
+One thing that I wasn't able to figure out was correctly implementing error checking. I wanted to display an error/warning message whenever the client tried to submit partial input (without choosing a language or without inputting a word) and specifically send the message only to the client that did that action. I tried socket.emit and one other method that I found on stackoverflow but the message kept being displayed on all clients. 
+
+Moreover, right now there are only 16 words in the JSON file, so when a word is randomly drawn, it may get repeated and the website can get boring after a while. In the future, it would be great if I expand the word options. All in all, this homework was a really great practice for Sockets and I feel so much more comfortable working with it now. 
