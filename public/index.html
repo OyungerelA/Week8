@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting Languages</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Mukta:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <section class="game-screen" id="game-screen">
+        <h1 class="heading">Connecting Languages</h1>
+        <div class="numBox">
+            <div class="languageNum-txt">
+                <h4>Languages Represented: </h4>
+            </div>
+            <div class="languageNum-box" id="languageNum-box">
+            </div>
+        </div>
+        <div class="container1">
+            <div class="prompt-wrapper">
+                <div>
+                    <h2 class="prompt-question">Let's Write: </h2>
+                </div>
+                <div class="prompt-word" id="prompt-word">
+                </div>
+            </div>
+            <button type="button" id="changeWordBtn">Get/Change Word</button>
+        </div>
+        <div class="container2" id="container2">
+            <div class="word-box" id="word-box">
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <select name="languages" id="language-select"></select>
+            <input type="text" id="input-area" autocomplete="off" placeholder="Translation of the word:">
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+        <div class="error-msg" id="error-msg">
+            <h3>Make sure to choose a language and fill in the input field.</h3>
+        </div>
+    </section>
+    <section class='info-screen' id='info-screen'>
+        <div class="instructions">
+            <p class="instruction-heading">How It Works</p>
+            <p>This is a language sharing platform. On the screen will be displayed a simple word or phrase that people learn when they are first learning a new language (i.e. hello, goodbye). You can write the prompted word in your language(s) and once you submit the translated word, it will be displayed real-time on the screen. People from all over the world can come together and share their languages with each other and help one another to learn phrases in different languages.</p>
+        </div>
+        <div class='startBtn-container'>
+            <button class="startBtn" id="startBtn">Let's Start</button>
+        </div>
+    </section>
+</body>
+</html>

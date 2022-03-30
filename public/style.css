@@ -1,0 +1,141 @@
+*{
+    font-family: 'Mukta', sans-serif;
+}
+
+html{
+    background-color:#e7e1fc;
+    font-family: 'Mukta', sans-serif;
+}
+
+button{
+    height: 2.5rem;
+    border-radius: 1rem;
+    outline: none;
+    border: none;
+    background-color: #ffefbd;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+button:hover{
+    background-color: #ffe38a;
+}
+
+.heading{
+    text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 2.5rem;
+}
+
+.container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.prompt-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+
+.prompt-wrapper > div{
+    margin: 10px;
+}
+
+.prompt-question{
+    font-weight: lighter;
+}
+
+.prompt-word h2{
+    font-weight: bold;
+}
+
+.container2{
+    border-width: 2px;
+    background-color: #d3c7ff;
+    border: none;
+    top: auto;
+    margin: auto;
+    width: 60vw;
+    height: 50vh;
+    overflow-y: scroll;
+    border-radius: 1rem;
+}
+
+.input-wrapper{
+    top: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    width: 60vw;
+    justify-content: space-around;
+}
+
+.word-box{
+    display: flex;
+    flex-direction: column;
+    line-height: 0.3rem;
+}
+
+.inputRow{
+    display: flex;
+    justify-content: space-around;
+}
+
+#input-area{
+    width: 10rem;
+}
+
+.error-msg{
+    text-align: center;
+    display: none;
+}
+
+.game-screen{
+    display: none;
+}
+
+.instruction-heading{
+    font-size: 1.3rem;
+}
+
+.instructions{
+    width: 40vw;
+    margin: auto;
+    padding-top: 10%;
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+.startBtn-container{
+    width: 8vw;
+    margin: auto;
+}
+
+/* .languageNum-box{
+} */
+
+.numBox{
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin: 0;
+    top: -1rem;
+    right: 1rem;
+}
+
+.numBox h4{
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
+.languageNum-box h4{
+    font-weight: lighter;
+    font-size: 1.1rem;
+}
+
