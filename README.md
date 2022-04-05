@@ -3,7 +3,7 @@ Week 8 HW - Make a Node-Express app that incorporates Socket.io. Try to incorpor
 - At least one ‘emit’ event on the server-side and one ‘emit’ event on the client-side
 - The ability to open 2 browser tabs and share data in real-time between the two
 
-See project [here](https://lacy-ginger-mayonnaise.glitch.me/).
+See project [here](https://connecting-languages.glitch.me//).
 
 ### Project Plan
 
